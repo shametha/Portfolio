@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/widgets/education_card.dart';
 
 class Education extends StatelessWidget {
   const Education({Key? key}) : super(key: key);
@@ -56,54 +57,65 @@ class Education extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
+                            flex:1,
                             child: Container(
                                 height: size.height * 0.6,
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: size.height * 0.5,
-                                      padding:
-                                          EdgeInsets.fromLTRB(10, 20, 0, 0),
-                                      child: VerticalDivider(
-                                        color: Color(0xff64FFDA),
-                                        thickness: 1.75,
+                                child: Center(
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        height: size.height * 0.55,
+                                        padding:
+                                            EdgeInsets.fromLTRB(15, 20, 0, 0),
+                                        child: VerticalDivider(
+                                          color: Color(0xff64FFDA),
+                                          thickness: 1.75,
+                                        ),
                                       ),
-                                    ),
-                                    Container(
-                                      child: Column(
-                                        children: [
-                                          SizedBox(height: size.height * 0.07),
-                                          CircleAvatar(
-                                            backgroundColor: Colors.pink,
-                                            child: FaIcon(
-                                                FontAwesomeIcons.laptopHouse,
-                                                color: Colors.white),
-                                          ),
-                                          SizedBox(height: size.height * 0.1),
-                                          CircleAvatar(
-                                            backgroundColor: Colors.red,
-                                            child: FaIcon(
-                                                FontAwesomeIcons.freeCodeCamp,
-                                                color: Colors.white),
-                                          ),
-                                          SizedBox(height: size.height * 0.07),
-                                          CircleAvatar(
-                                            backgroundColor: Colors.brown,
-                                            child: FaIcon(
-                                                FontAwesomeIcons.laptopCode,
-                                                color: Colors.white),
-                                          ),
-                                          SizedBox(height: size.height * 0.1),
-                                        ],
-                                      ),
-                                    )
-                                  ],
+                                      Container(
+                                        child: Column(
+                                          children: [
+                                            SizedBox(
+                                                height: size.height * 0.07),
+                                            CircleAvatar(
+                                              radius: 25,
+                                              backgroundColor: Color(0xff64FFDA),
+                                              child: FaIcon(
+                                                  FontAwesomeIcons.laptopCode,
+                                                  color: Colors.indigo[900]),
+                                            ),
+                                            SizedBox(
+                                                height: size.height * 0.1),
+                                            CircleAvatar(
+                                              radius: 25,
+                                              backgroundColor:Color(0xff64FFDA),
+                                              child: FaIcon(
+                                                  FontAwesomeIcons.laptopHouse,
+                                                  color: Colors.indigo[900]),
+                                            ),
+                                            SizedBox(
+                                                height: size.height * 0.12),
+                                            CircleAvatar(
+                                              radius: 25,
+                                              backgroundColor: Color(0xff64FFDA),
+                                              child: FaIcon(
+                                                  FontAwesomeIcons.school,
+                                                  color: Colors.indigo[900]),
+                                            ),
+                                            SizedBox(
+                                                height: size.height * 0.1),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 )),
                           ),
                           Expanded(
+                            flex: 3,
                               child: Container(
-                            height: size.height * 0.1,
-                            child: Column(),
+                            height: size.height * 0.5,
+                            child: EducationCard(),
                           ))
                         ],
                       )
