@@ -68,257 +68,262 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.blue,
-      body: SingleChildScrollView(
-        physics: ScrollPhysics(),
-        primary: true,
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Container(
-              height: size.height * 0.14,
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
+      backgroundColor: Color(0xff052EC1),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('/images/bg.jpg'),
+          fit: BoxFit.cover,
+          colorFilter: new ColorFilter.mode(
+              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+        )),
+        child: SingleChildScrollView(
+          physics: ScrollPhysics(),
+          primary: true,
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Container(
+                height: size.height * 0.14,
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    Spacer(),
+                    Expanded(
+                      child: DefaultTabController(
+                          length: 5,
+                          child: TabBar(
+                            indicatorColor: Colors.yellow,
+                            onTap: (index) async {
+                              _scrollToIndex(index);
+                            },
+                            tabs: [
+                              Tab(
+                                  child: Text(
+                                "About",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  letterSpacing: 3.0,
+                                  color: Color(0xffBAD0D0),
+                                ),
+                              )),
+                              Tab(
+                                  child: Text(
+                                "Education",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  letterSpacing: 3.0,
+                                  color: Color(0xffBAD0D0),
+                                ),
+                              )),
+                              Tab(
+                                  child: Text(
+                                "Experience",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  letterSpacing: 3.0,
+                                  color: Color(0xffBAD0D0),
+                                ),
+                              )),
+                              Tab(
+                                  child: Text(
+                                "Projects",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  letterSpacing: 3.0,
+                                  color: Color(0xffBAD0D0),
+                                ),
+                              )),
+                              Tab(
+                                  child: Text(
+                                "Contact Me",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  letterSpacing: 3.0,
+                                  color: Color(0xffBAD0D0),
+                                ),
+                              )),
+                            ],
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
                 children: [
-                  Spacer(),
-                  Expanded(
-                    child: DefaultTabController(
-                        length: 5,
-                        child: TabBar(
-                          indicatorColor: Colors.yellow,
-                          onTap: (index) async {
-                            _scrollToIndex(index);
-                          },
-                          tabs: [
-                            Tab(
-                                child: Text(
-                              "About",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                letterSpacing: 3.0,
-                                color: Color(0xffBAD0D0),
-                              ),
-                            )),
-                            Tab(
-                                child: Text(
-                              "Education",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                letterSpacing: 3.0,
-                                color: Color(0xffBAD0D0),
-                              ),
-                            )),
-                            Tab(
-                                child: Text(
-                              "Experience",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                letterSpacing: 3.0,
-                                color: Color(0xffBAD0D0),
-                              ),
-                            )),
-                            Tab(
-                                child: Text(
-                              "Projects",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                letterSpacing: 3.0,
-                                color: Color(0xffBAD0D0),
-                              ),
-                            )),
-                            Tab(
-                                child: Text(
-                              "Contact Me",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                letterSpacing: 3.0,
-                                color: Color(0xffBAD0D0),
-                              ),
-                            )),
-                          ],
-                        )),
+                  Container(
+                    height: size.height - 82,
+                    width: size.width * 0.09,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.all(5),
+                          width: 40,
+                          height: 40,
+                          decoration: new BoxDecoration(
+                            color: Color(0xffC1C1C1),
+                            shape: BoxShape.circle,
+                          ),
+                          child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.github),
+                              color: Color(0xff052EC1),
+                              iconSize: 20.0,
+                              onPressed: () {
+                                //method.launchURL("https://github.com/shametha");
+                              }),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(5),
+                          width: 40,
+                          height: 40,
+                          decoration: new BoxDecoration(
+                            color: Color(0xffC1C1C1),
+                            shape: BoxShape.circle,
+                          ),
+                          child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.linkedin),
+                              color: Color(0xff052EC1),
+                              iconSize: 20.0,
+                              onPressed: () {
+                                //method.launchURL("https://www.linkedin.com/in/shametha");
+                              }),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(5),
+                          width: 40,
+                          height: 40,
+                          decoration: new BoxDecoration(
+                            color: Color(0xffC1C1C1),
+                            shape: BoxShape.circle,
+                          ),
+                          child: IconButton(
+                              icon: Icon(Icons.mail_outline_rounded),
+                              color: Color(0xff052EC1),
+                              iconSize: 20.0,
+                              onPressed: () {
+                                //method.launchURL("https://www.linkedin.com/in/shametha");
+                              }),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 16.0),
+                          child: Container(
+                            height: size.height * 0.20,
+                            width: 2,
+                            color: Colors.grey.withOpacity(0.4),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
+                  Expanded(
+                      child: Container(
+                    height: size.height - 82,
+                    child: CustomScrollView(
+                      controller: _autoScrollController,
+                      slivers: [
+                        SliverList(
+                            delegate: SliverChildListDelegate([
+                          Stack(
+                            children: [
+                              Row(children: [
+                                Container(
+                                  color: Colors.black,
+                                  width: size.width * 0.3,
+                                ),
+                                Container(
+                                  width: size.width * 0.6,
+                                  child: Image.asset(
+                                    '/images/p.jpg',
+                                  ),
+                                  color: Colors.green,
+                                )
+                              ]),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    height: size.height * 0.2,
+                                  ),
+                                  Text(
+                                    "Hello! I am",
+                                    style: TextStyle(
+                                      fontSize: 50.0,
+                                      letterSpacing: 3.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    "Shametha K G",
+                                    style: TextStyle(
+                                      fontSize: 90.0,
+                                      fontWeight: FontWeight.w900,
+                                      letterSpacing: 3.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    "Student Flutter developer from India",
+                                    style: TextStyle(
+                                      fontSize: 30.0,
+                                      letterSpacing: 3.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: size.height * 0.2,
+                                  ),
+                                  Wrap(
+                                    children: [
+                                      Text(
+                                        "Temporary Text----A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 16.0,
+                                          letterSpacing: 2.75,
+                                          wordSpacing: 0.75,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  
+                                ],
+                              ),
+                            ],
+                          ),
+                          _wrapScrollTag(
+                            index: 0,
+                            child: About(),
+                          ),
+                          // SizedBox(
+                          //   height: size.height * 0.12,
+                          // ),                          
+                          _wrapScrollTag(
+                            index: 1, 
+                            child: Education()
+                            ),
+                          SizedBox(
+                            height: size.height * 0.10,
+                          ),
+                        ]))
+                      ],
+                    ),
+                  )),
                 ],
               ),
-            ),
-            Row(
-              children: [
-                Container(
-                  height: size.height - 82,
-                  width: size.width * 0.09,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(20),
-                        width: 60,
-                        height: 60,
-                        decoration: new BoxDecoration(
-                          color: Colors.orange,
-                          shape: BoxShape.circle,
-                        ),
-                        child: IconButton(
-                            icon: FaIcon(FontAwesomeIcons.github),
-                            color: Color(0xffffA8B2D1),
-                            iconSize: 32.0,
-                            onPressed: () {
-                              //method.launchURL("https://github.com/shametha");
-                            }),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(20),
-                        width: 60,
-                        height: 60,
-                        decoration: new BoxDecoration(
-                          color: Colors.orange,
-                          shape: BoxShape.circle,
-                        ),
-                        child: IconButton(
-                            icon: FaIcon(FontAwesomeIcons.linkedin),
-                            color: Color(0xffffA8B2D1),
-                            iconSize: 32.0,
-                            onPressed: () {
-                              //method.launchURL("https://www.linkedin.com/in/shametha");
-                            }),
-                      ),
-                      Container(
-                        margin: EdgeInsets.all(20),
-                        width: 60,
-                        height: 60,
-                        decoration: new BoxDecoration(
-                          color: Colors.orange,
-                          shape: BoxShape.circle,
-                        ),
-                        child: IconButton(
-                            icon: Icon(Icons.mail_outline_rounded),
-                            color: Color(0xffffA8B2D1),
-                            iconSize: 32.0,
-                            onPressed: () {
-                              //method.launchURL("https://www.linkedin.com/in/shametha");
-                            }),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 16.0),
-                        child: Container(
-                          height: size.height * 0.20,
-                          width: 2,
-                          color: Colors.grey.withOpacity(0.4),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                    child: Container(
-                  height: size.height - 82,
-                  //color: Colors.black,
-                  child: CustomScrollView(
-                    controller: _autoScrollController,
-                    slivers: [
-                      SliverList(
-                          delegate: SliverChildListDelegate([
-                        Stack(
-                          children: [
-                            Row(children: [
-                              Container(
-                                color: Colors.black,
-                                width: size.width * 0.3,
-                              ),
-                              Container(
-                                width: size.width * 0.6,
-                                child: Image.asset(
-                                  '/images/p.jpg',
-                                  // height: size.height/3,
-                                  // width: size.width/3,
-                                ),
-                                color: Colors.green,
-                              )
-                            ]),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  height: size.height * 0.2,
-                                ),
-                                Text(
-                                  "Hello! I am",
-                                  style: TextStyle(
-                                    fontSize: 50.0,
-                                    letterSpacing: 3.0,
-                                    color: Color(0xffBAD0D0),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 6,
-                                ),
-                                Text(
-                                  "Shametha K G",
-                                  style: TextStyle(
-                                    fontSize: 90.0,
-                                    fontWeight: FontWeight.w900,
-                                    letterSpacing: 3.0,
-                                    color: Color(0xffBAD0D0),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 6,
-                                ),
-                                Text(
-                                  "Student Flutter developer from India",
-                                  style: TextStyle(
-                                    fontSize: 30.0,
-                                    letterSpacing: 3.0,
-                                    color: Color(0xffBAD0D0),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: size.height * 0.2,
-                                ),
-                                Wrap(
-                                  children: [
-                                    Text(
-                                      "Temporary Text----A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 16.0,
-                                        letterSpacing: 2.75,
-                                        wordSpacing: 0.75,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: size.height * .12,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        _wrapScrollTag(
-                          index: 0,
-                          child: About(),
-                        ),
-                        SizedBox(
-                          height: size.height * 0.02,
-                        ),
-
-                        //Where I've Worked
-                        _wrapScrollTag(index: 1, child: Education()),
-                        SizedBox(
-                          height: size.height * 0.10,
-                        ),
-                      ]))
-                    ],
-                  ),
-                )),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
