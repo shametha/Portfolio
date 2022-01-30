@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/screens/About.dart';
 import 'package:portfolio/screens/Education.dart';
+import 'package:portfolio/screens/Experience.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -313,9 +314,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             index: 1, 
                             child: Education()
                             ),
-                          SizedBox(
-                            height: size.height * 0.10,
-                          ),
+                          // SizedBox(
+                          //   height: size.height * 0.10,
+                          //),
+                          _wrapScrollTag(
+                            index: 2, 
+                            child: Experience()
+                            ),
                         ]))
                       ],
                     ),
