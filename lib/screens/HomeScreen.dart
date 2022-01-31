@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/screens/About.dart';
 import 'package:portfolio/screens/Education.dart';
 import 'package:portfolio/screens/Experience.dart';
+import 'package:portfolio/screens/Project.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -320,6 +321,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           _wrapScrollTag(
                             index: 2, 
                             child: Experience()
+                            ),
+                            _wrapScrollTag(
+                            index: 3, 
+                            child: Project()
                             ),
                         ]))
                       ],
