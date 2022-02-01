@@ -15,7 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  //Method method = Method();
+  //Launcher launch = Launcher();
   late AutoScrollController _autoScrollController;
   final scrollDirection = Axis.vertical;
   bool isExpaned = true;
@@ -177,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                //method.launchURL("https://github.com/shametha");
+                                //launch.launchURL("https://github.com/shametha");
                               }),
                         ),
                         Container(
@@ -193,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                //method.launchURL("https://www.linkedin.com/in/shametha");
+                                //launch.launchURL("https://www.linkedin.com/in/shametha");
                               }),
                         ),
                         Container(
@@ -209,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                //method.launchURL("https://www.linkedin.com/in/shametha");
+                                //launch.launchURL("https://www.linkedin.com/in/shametha");
                               }),
                         ),
                         Padding(
