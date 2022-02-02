@@ -99,7 +99,7 @@ class ProjectCardVideo extends StatelessWidget {
                 
                 Positioned(
                   top: size.height *0.4,
-                  right: 10.0,                  
+                  right: 10.0,  
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
