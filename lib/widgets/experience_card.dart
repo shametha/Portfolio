@@ -15,7 +15,16 @@ class ExperienceCard extends StatelessWidget {
           description1: '• Organised 2 Hacakthons along with Extra-curricular competitions, Tech Webinars, Mentorship for all participants\n• Organised various Tech Webinars and Orientation sessions featuring Tech geeks', 
           duration: 'June 2021 - Present',          
           skills: 'Leadership, Creativity, Event organising.',
-                    
+                  
+        ),
+        SizedBox(
+            height: size.height * 0.05),
+        ExperienceData(
+          jobRole: 'Co-Developer', 
+          company: 'Smart India Hackathon Portal And Smart India Hackathon Alumni Portal Development', 
+          description1: '• Worked on the front-end for SIH - Portal organised by MHRD, government of India.\n• Drafted the content for emails, Cards in the portal', 
+          duration: 'November 2021 - January 2022',          
+          skills: 'Coding Standards , Version Control Systems, Website development using react, Team Collaboration.',                    
         ),
         SizedBox(
             height: size.height * 0.05),
@@ -46,15 +55,7 @@ class ExperienceCard extends StatelessWidget {
           duration: 'May 2020 – August 2020',          
           skills: 'Leadership, Documentation, Persuasion, Team Work.',                    
         ),
-        SizedBox(
-            height: size.height * 0.05),
-        ExperienceData(
-          jobRole: 'Co-Developer', 
-          company: 'Smart India Hackathon Portal And Smart India Hackathon Alumni Portal Development', 
-          description1: '• Worked on the front-end for SIH - Portal organised by MHRD, government of India.\n• Drafted the content for emails, Cards in the portal', 
-          duration: 'November 2021 - January 2022',          
-          skills: 'Coding Standards , Version Control Systems, Website development using react, Team Collaboration.',                    
-        ),
+        
       ],
     );
   }

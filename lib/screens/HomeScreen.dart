@@ -308,16 +308,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             index: 0,
                             child: About(),
                           ),
-                          // SizedBox(
-                          //   height: size.height * 0.12,
-                          // ),                          
+                                                    
                           _wrapScrollTag(
                             index: 1, 
                             child: Education()
                             ),
-                          // SizedBox(
-                          //   height: size.height * 0.10,
-                          //),
+                          
                           _wrapScrollTag(
                             index: 2, 
                             child: Experience()

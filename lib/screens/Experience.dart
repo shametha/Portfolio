@@ -25,7 +25,7 @@ class Experience extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "02.",
+                              "03.",
                               style: TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.w700,
@@ -98,13 +98,13 @@ class Experience extends StatelessWidget {
                                                   color: Colors.indigo[900]),
                                             ),
                                             SizedBox(
-                                                height: size.height * 0.15),
+                                                height: size.height * 0.12),
                                             CircleAvatar(
                                               radius: 25,
                                               backgroundColor:
                                                   Color(0xff64FFDA),
                                               child: FaIcon(
-                                                  FontAwesomeIcons.bullseye,
+                                                  FontAwesomeIcons.code,
                                                   color: Colors.indigo[900]),
                                             ),
                                             SizedBox(height: size.height * 0.15),
@@ -113,7 +113,7 @@ class Experience extends StatelessWidget {
                                               backgroundColor:
                                                   Color(0xff64FFDA),
                                               child: FaIcon(
-                                                  FontAwesomeIcons.crown,
+                                                  FontAwesomeIcons.bullseye,
                                                   color: Colors.indigo[900]),
                                             ),
                                             SizedBox(height: size.height * 0.13),
@@ -122,7 +122,7 @@ class Experience extends StatelessWidget {
                                               backgroundColor:
                                                   Color(0xff64FFDA),
                                               child: FaIcon(
-                                                  FontAwesomeIcons.laptopCode,
+                                                  FontAwesomeIcons.crown,
                                                   color: Colors.indigo[900]),
                                             ),
                                             
