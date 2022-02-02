@@ -27,7 +27,6 @@ class ProjectCardVideo extends StatelessWidget {
     return Container(
       height: size.height / 0.999,
       width: size.width - 100,
-      color: Colors.tealAccent,
       child: Column(
         children: [
           Container(
@@ -62,7 +61,7 @@ class ProjectCardVideo extends StatelessWidget {
                             fontSize: 27,
                             fontWeight: FontWeight.w700,
                             letterSpacing: 1.75,
-                            color: Colors.grey,
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -98,9 +97,9 @@ class ProjectCardVideo extends StatelessWidget {
                   ),
                 ),
                 
-                Container(
-                  height: size.height * 0.08,
-                  width: size.width * 0.25,
+                Positioned(
+                  top: size.height *0.4,
+                  right: 10.0,                  
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -110,6 +109,13 @@ class ProjectCardVideo extends StatelessWidget {
                         onPressed: (){
                           launch.launchURL(githubLink);
                         },
+                      ),
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.link),
+                        color: Colors.white,
+                        onPressed: (){
+                          launch.launchURL(otherLink);
+                        }
                       ),
                     ],
                   ),

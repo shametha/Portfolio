@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/Model/Launcher.dart';
 
 class ProjectCardImage extends StatelessWidget {
   final String imagePath;
   final String projectTitle;
   final String projectDesc;
   final String tech;
-  final Function ontab;
+  final String githubLink;
+  final String otherLink;
 
   ProjectCardImage({
     required this.imagePath,
-    required this.ontab,
     required this.projectDesc,
     required this.projectTitle,
-    required this.tech,
+    required this.tech, 
+    required this.githubLink, 
+    required this.otherLink,
   });
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    Launcher launch = Launcher();
     return Container(
       height: size.height / 0.999,
       width: size.width - 100,
@@ -91,15 +95,22 @@ class ProjectCardImage extends StatelessWidget {
                 ),
                 
                 Container(
-                  height: size.height * 0.08,
-                  width: size.width * 0.25,
-                  child: Row(
+                    child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       IconButton(
                         icon: FaIcon(FontAwesomeIcons.github),
                         color: Colors.white,
-                        onPressed: ontab(),
+                        onPressed: (){
+                          launch.launchURL(githubLink);
+                        }
+                      ),
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.freeCodeCamp),
+                        color: Colors.white,
+                        onPressed: (){
+                          launch.launchURL(otherLink);
+                        }
                       ),
                     ],
                   ),
