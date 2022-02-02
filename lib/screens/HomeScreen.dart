@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/Model/Launcher.dart';
 import 'package:portfolio/screens/About.dart';
 import 'package:portfolio/screens/Education.dart';
 import 'package:portfolio/screens/Experience.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  //Launcher launch = Launcher();
+  Launcher launch = Launcher();
   late AutoScrollController _autoScrollController;
   final scrollDirection = Axis.vertical;
   bool isExpaned = true;
@@ -177,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                //launch.launchURL("https://github.com/shametha");
+                                launch.launchURL("https://github.com/shametha");
                               }),
                         ),
                         Container(
@@ -193,7 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                //launch.launchURL("https://www.linkedin.com/in/shametha");
+                                launch.launchURL("https://www.linkedin.com/in/shametha");
                               }),
                         ),
                         Container(
@@ -209,7 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                //launch.launchURL("https://www.linkedin.com/in/shametha");
+                                launch.launchEmail();
                               }),
                         ),
                         Padding(

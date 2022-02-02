@@ -22,7 +22,9 @@ dependencies:
   url_launcher: ^6.0.10
   font_awesome_flutter: ^9.2.0
   scroll_to_index:
-  video_player:
+  youtube_player_iframe:
+  #youtube_player_flutter:
+  #video_player:
 
 dev_dependencies:
   flutter_test:
