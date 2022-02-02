@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/Model/Launcher.dart';
+import 'package:portfolio/widgets/project_card_image.dart';
 import 'package:portfolio/widgets/project_card_video.dart';
 
 class Project extends StatelessWidget {
@@ -8,7 +8,6 @@ class Project extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    Launcher launch = Launcher();
     return Column(
       children: [
         Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -46,7 +45,7 @@ class Project extends StatelessWidget {
           ),
         ]),
         Container(
-            height: size.height * 3,
+            height: size.height * 6 ,
             child: Column(
               children: [
                 ProjectCardVideo(
@@ -57,7 +56,15 @@ class Project extends StatelessWidget {
                   tech: "Dart", 
                   githubLink: 'https://github.com/shametha/WoMentr', 
                   otherLink: 'https://devpost.com/software/womentr-8e3df1',
-                ),                
+                ),  
+                ProjectCardImage(
+                  imagePath: 'images/bg.jpg', 
+                  projectDesc: 'Docoline is a virtual Doctor appointment booking application, that has been developed to override the problems of booking an appointment with a doctor specially prevailing in the pandemic situation. This software is supported to eliminate the hardships faced by this existing manual booking system. No formal knowledge is needed for the user to use this system. Thus by this all it proves it is user-friendly.', 
+                  projectTitle: 'Docoline', 
+                  tech: 'dart', 
+                  githubLink: 'https://github.com/shametha/Docoline', 
+                  otherLink: ''
+                  ),              
                 ProjectCardVideo(
                   id: 1,
                   projectDesc:
@@ -66,7 +73,15 @@ class Project extends StatelessWidget {
                   tech: "Dart", 
                   githubLink: 'https://github.com/shametha/BID', 
                   otherLink: 'https://youtu.be/qGPyYEPY33U',
-                )
+                ),
+                ProjectCardImage(
+                  imagePath: 'images/bg.jpg', 
+                  projectDesc: 'A flutter application where users worldwide can share and view recipes from other users. This application has a great UI.', 
+                  projectTitle: 'Recipe App - UI/UX', 
+                  tech: 'dart', 
+                  githubLink: 'https://github.com/shametha/Flutter-RecipeApp-UI', 
+                  otherLink: ''
+                  ),
               ],              
             )),
       ],

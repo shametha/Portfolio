@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Model/Launcher.dart';
 import 'package:portfolio/screens/About.dart';
+import 'package:portfolio/screens/Contact.dart';
 import 'package:portfolio/screens/Education.dart';
 import 'package:portfolio/screens/Experience.dart';
 import 'package:portfolio/screens/Project.dart';
@@ -323,6 +324,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             index: 3, 
                             child: Project()
                             ),
+                            _wrapScrollTag(
+                              index: 4, 
+                              child: Contact())
                         ]))
                       ],
                     ),
