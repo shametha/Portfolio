@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/Model/Launcher.dart';
+import 'package:portfolio/widgets/project_card_image.dart';
 import 'package:portfolio/widgets/project_card_video.dart';
 
 class Project extends StatelessWidget {
@@ -57,7 +58,14 @@ class Project extends StatelessWidget {
                   tech: "Dart", 
                   githubLink: 'https://github.com/shametha/WoMentr', 
                   otherLink: 'https://devpost.com/software/womentr-8e3df1',
-                ),                
+                ),  
+                ProjectCardImage(
+                  imagePath: 'images/bg.jpg', 
+                  projectDesc: 'Docoline is a virtual Doctor appointment booking application, that has been developed to override the problems of booking an appointment with a doctor specially prevailing in the pandemic situation. This software is supported to eliminate the hardships faced by this existing manual booking system. No formal knowledge is needed for the user to use this system. Thus by this all it proves it is user-friendly.', 
+                  projectTitle: 'Docoline', 
+                  tech: 'dart', 
+                  githubLink: 'https://github.com/shametha/Docoline', 
+                  otherLink: ''),              
                 ProjectCardVideo(
                   id: 1,
                   projectDesc:
