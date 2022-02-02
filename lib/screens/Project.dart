@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/project_card.dart';
+import 'package:portfolio/Model/Launcher.dart';
+import 'package:portfolio/widgets/project_card_video.dart';
 
 class Project extends StatelessWidget {
   const Project({Key? key}) : super(key: key);
@@ -7,6 +8,7 @@ class Project extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    Launcher launch = Launcher();
     return Column(
       children: [
         Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -44,21 +46,28 @@ class Project extends StatelessWidget {
           ),
         ]),
         Container(
-            height: size.height * 2,
+            height: size.height * 3,
             child: Column(
               children: [
-                ProjectCard(
-                  imagePath: "images/p.jpg",
-                  ontab: () {
-                    //launch.launchURL(
-                    //"");
-                  },
+                ProjectCardVideo(
+                  id: 0,
                   projectDesc:
-                      "A flutter package which help developer in creating a onboarding screens of their app.",
+                      "WoMentr is a virtual anonymous mobile app that serves as a single platforms for women to discuss all their problems and insecurities. Women can post their problems, doubts, and ideas and to every question asked, other women users from across the globe can comment, answer, upvote or downvote.Also the identity of the user is never revealed to anyone so women can freely discuss their problems without the fear being judged .",
                   projectTitle: "WoMentr",
-                  tech: "Dart",
+                  tech: "Dart", 
+                  githubLink: 'https://github.com/shametha/WoMentr', 
+                  otherLink: 'https://devpost.com/software/womentr-8e3df1',
+                ),                
+                ProjectCardVideo(
+                  id: 1,
+                  projectDesc:
+                      "BID is a flutter application that allows indegenious farmer and artisans to sell their products at an international platform in the form of an auction. This application was built to promote the small business during the pandemic",
+                  projectTitle: "BID",
+                  tech: "Dart", 
+                  githubLink: 'https://github.com/shametha/BID', 
+                  otherLink: 'https://youtu.be/qGPyYEPY33U',
                 )
-              ],
+              ],              
             )),
       ],
     );
