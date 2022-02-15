@@ -10,6 +10,7 @@ class ProjectCardVideo extends StatelessWidget {
   final String tech;
   final String githubLink;
   final String otherLink;
+  final String youtubelink;
 
   ProjectCardVideo({
     required this.id,
@@ -17,7 +18,8 @@ class ProjectCardVideo extends StatelessWidget {
     required this.projectTitle,
     required this.tech, 
     required this.githubLink, 
-    required this.otherLink,
+    required this.otherLink, 
+    required this.youtubelink,
   });
 
   @override
@@ -25,12 +27,12 @@ class ProjectCardVideo extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     Launcher launch = Launcher();
     return Container(
-      height: size.height / 0.999,
+      height: size.height/1.1543,
       width: size.width - 100,
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(30),
+            padding: EdgeInsets.only(left:30,right: 30),
             height: size.height - 100,
             width: size.width - 84,
             child: Stack(
@@ -50,7 +52,6 @@ class ProjectCardVideo extends StatelessWidget {
                   top: 16.0,
                   right: 40.0,
                   child: Container(
-                    height: size.height * 0.10,
                     width: size.width * 0.25,
                     child: Wrap(
                       alignment: WrapAlignment.end,
@@ -69,14 +70,13 @@ class ProjectCardVideo extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: size.height *0.1,
+                  top: size.height *0.15,
                   right: 10.0,
                   child: Container(
                     padding: EdgeInsets.all(10),
                     alignment: Alignment.center,
-                    height: size.height * 0.3,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color:Colors.white70),
                     width: size.width * 0.32,
-                    color: Colors.white70,
                     child: Wrap(
                       alignment: WrapAlignment.center,
                       children: [
@@ -88,7 +88,7 @@ class ProjectCardVideo extends StatelessWidget {
                               fontSize: 16.0,
                               fontWeight: FontWeight.w700,
                               letterSpacing: 0.75,
-                              color: Colors.blue[900],
+                              color: Colors.black,
                             ),
                           ),
                         ),
@@ -98,7 +98,7 @@ class ProjectCardVideo extends StatelessWidget {
                 ),
                 
                 Positioned(
-                  top: size.height *0.4,
+                  top: size.height *0.07,
                   right: 10.0,  
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -115,6 +115,13 @@ class ProjectCardVideo extends StatelessWidget {
                         color: Colors.white,
                         onPressed: (){
                           launch.launchURL(otherLink);
+                        }
+                      ),
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.youtube),
+                        color: Colors.white,
+                        onPressed: (){
+                          launch.launchURL(youtubelink);
                         }
                       ),
                     ],

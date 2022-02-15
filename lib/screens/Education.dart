@@ -10,7 +10,7 @@ class Education extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Row(
       children: [
-        Container(width: size.width * 0.3),
+       
         Container(
             height: size.height * 0.8,
             width: size.width * 0.5,

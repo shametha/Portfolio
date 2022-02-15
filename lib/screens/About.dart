@@ -11,6 +11,14 @@ class About extends StatelessWidget {
         width: size.width * 0.3,
         child: Row(children: [
           Container(
+            padding: EdgeInsets.only(right: 100),
+                height: 630,
+                width: 630,
+                child: Image(image: AssetImage('/images/TechStack.png' ),),
+                
+              
+              ),
+          Container(
               height: size.height * 0.7,
               width: size.width / 2 - 100,
               child: Column(
@@ -233,7 +241,8 @@ class About extends StatelessWidget {
                     ),
                   )
                 ],
-              ))
+              )),
+              
         ]));
   }
 }
