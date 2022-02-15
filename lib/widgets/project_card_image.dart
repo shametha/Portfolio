@@ -8,7 +8,6 @@ class ProjectCardImage extends StatelessWidget {
   final String projectDesc;
   final String tech;
   final String githubLink;
-  final String otherLink;
 
   ProjectCardImage({
     required this.imagePath,
@@ -16,7 +15,6 @@ class ProjectCardImage extends StatelessWidget {
     required this.projectTitle,
     required this.tech,
     required this.githubLink,
-    required this.otherLink,
   });
 
   @override
@@ -24,7 +22,6 @@ class ProjectCardImage extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     Launcher launch = Launcher();
     return Container(
-      height: size.height / 0.999,
       width: size.width - 100,
       child: Column(
         children: [
@@ -68,14 +65,13 @@ class ProjectCardImage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: size.height * 0.1,
+                  top: size.height * 0.15,
                   right: 10.0,
                   child: Container(
                     padding: EdgeInsets.all(10),
                     alignment: Alignment.center,
-                    height: size.height * 0.3,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color:Colors.white70),
                     width: size.width * 0.32,
-                    color: Colors.white70,
                     child: Wrap(
                       alignment: WrapAlignment.center,
                       children: [
@@ -96,7 +92,7 @@ class ProjectCardImage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: size.height * 0.4,
+                  top: size.height * 0.07,
                   right: 10.0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -107,12 +103,7 @@ class ProjectCardImage extends StatelessWidget {
                           onPressed: () {
                             launch.launchURL(githubLink);
                           }),
-                      IconButton(
-                          icon: FaIcon(FontAwesomeIcons.link),
-                          color: Colors.white,
-                          onPressed: () {
-                            launch.launchURL(otherLink);
-                          }),
+                      
                     ],
                   ),
                 ),

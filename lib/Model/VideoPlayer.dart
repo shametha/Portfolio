@@ -15,10 +15,10 @@ class YoutubePlayer extends StatefulWidget {
 class _YoutubePlayerState extends State<YoutubePlayer> {
   late YoutubePlayerController _ytbPlayerController;
   List<YoutubeModel> videosList = [
+    YoutubeModel(title:'Shero', youtubeId: 'dcj_J3tjbX8'),
     YoutubeModel(title:'womentr', youtubeId: '1QHQ0YJodxI'),
-    YoutubeModel(title: 'Bid', youtubeId: 'vWAGz7-CJhg'),
-    YoutubeModel(title: 'docoline', youtubeId: 'FLcRb289uEM'),
-    YoutubeModel(title: 'Recipe', youtubeId: 'g2nMKzhkvxw'),
+    YoutubeModel(title: 'Bid', youtubeId: 'a8XGQ7IJ45Y'),
+    
   ];
 
   @override
