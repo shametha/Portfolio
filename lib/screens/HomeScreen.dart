@@ -6,6 +6,7 @@ import 'package:portfolio/screens/About.dart';
 import 'package:portfolio/screens/Contact.dart';
 import 'package:portfolio/screens/Education.dart';
 import 'package:portfolio/screens/Experience.dart';
+import 'package:portfolio/screens/MiniProject.dart';
 import 'package:portfolio/screens/Project.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
@@ -95,9 +96,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Spacer(),
                     Expanded(
                       child: DefaultTabController(
-                          length: 5,
+                          length: 4,
                           child: TabBar(
-                            indicatorColor: Colors.yellow,
+                            indicatorColor: Colors.greenAccent,
                             onTap: (index) async {
                               _scrollToIndex(index);
                             },
@@ -142,16 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: Color(0xffBAD0D0),
                                 ),
                               )),
-                              Tab(
-                                  child: Text(
-                                "Contact Me",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  letterSpacing: 3.0,
-                                  color: Color(0xffBAD0D0),
-                                ),
-                              )),
+                              
                             ],
                           )),
                     ),
@@ -287,21 +279,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                   SizedBox(
                                     height: size.height * 0.2,
-                                  ),
-                                  Wrap(
-                                    children: [
-                                      Text(
-                                        "Temporary Text----A random paragraph can also be an excellent way for a writer to tackle writers' block. Writing block can often happen due to being stuck with a current project that the writer is trying to complete. By inserting a completely random paragraph from which to begin, it can take down some of the issues that may have been causing the writers' block in the first place.",
-                                        style: TextStyle(
-                                          color: Colors.grey,
-                                          fontSize: 16.0,
-                                          letterSpacing: 2.75,
-                                          wordSpacing: 0.75,
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  
+                                  ),                               
                                 ],
                               ),
                             ],
@@ -309,13 +287,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           _wrapScrollTag(
                             index: 0,
                             child: About(),
-                          ),
-                                                    
+                          ),                                                    
                           _wrapScrollTag(
                             index: 1, 
                             child: Education()
-                            ),
-                          
+                            ),                          
                           _wrapScrollTag(
                             index: 2, 
                             child: Experience()
@@ -323,6 +299,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             _wrapScrollTag(
                             index: 3, 
                             child: Project()
+                            ),
+                            _wrapScrollTag(
+                            index: 5, 
+                            child: MiniProject()
                             ),
                             _wrapScrollTag(
                               index: 4, 

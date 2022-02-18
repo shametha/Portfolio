@@ -100,8 +100,7 @@ class Project extends StatelessWidget {
                   projectDesc: 'A flutter application where users worldwide can share and view recipes from other users. This application has a great UI.', 
                   projectTitle: 'Noted', 
                   tech: 'dart', 
-                  githubLink: 'https://github.com/shametha/Flutter-RecipeApp-UI', 
-                 
+                  githubLink: 'https://github.com/shametha/Flutter-RecipeApp-UI',                  
                   ),
               ],              
             )),
