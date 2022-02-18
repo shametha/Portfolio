@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   late AutoScrollController _autoScrollController;
   final scrollDirection = Axis.vertical;
   bool isExpaned = true;
+  
 
   bool get _isAppBarExpanded {
     return _autoScrollController.hasClients &&
@@ -71,7 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final Size size = MediaQuery.of(context).size;   
+    
     return Scaffold(
       backgroundColor: Color(0xff052EC1),
       body: Container(
@@ -152,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   letterSpacing: 3.0,
                                   color: Color(0xffBAD0D0),
                                 ),
-                              )),                              
+                              )),
                             ],
                           )),
                     ),
@@ -180,7 +182,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                launch.launchURL("https://github.com/shametha");
+                                launch
+                                    .launchURL("https://github.com/shametha");
                               }),
                         ),
                         Container(
@@ -196,7 +199,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                launch.launchURL("https://www.linkedin.com/in/shametha");
+                                launch.launchURL(
+                                    "https://www.linkedin.com/in/shametha");
                               }),
                         ),
                         Container(
@@ -212,7 +216,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Color(0xff052EC1),
                               iconSize: 20.0,
                               onPressed: () {
-                                launch.launchURL("https://shamethagopinathan.wixsite.com/indegeniousindianart");
+                                launch.launchURL(
+                                    "https://shamethagopinathan.wixsite.com/indegeniousindianart");
                               }),
                         ),
                         Container(
@@ -304,7 +309,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                   SizedBox(
                                     height: size.height * 0.2,
-                                  ),                               
+                                  ),
                                 ],
                               ),
                             ],
@@ -312,26 +317,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           _wrapScrollTag(
                             index: 0,
                             child: About(),
-                          ),                                                    
-                          _wrapScrollTag(
-                            index: 1, 
-                            child: Education()
-                            ),                          
-                          _wrapScrollTag(
-                            index: 2, 
-                            child: Experience()
-                            ),
-                            _wrapScrollTag(
-                            index: 3, 
-                            child: Project()
-                            ),
-                            _wrapScrollTag(
-                            index: 3, 
-                            child: MiniProject()
-                            ),
-                            _wrapScrollTag(
-                              index:4, 
-                              child: Contact())
+                          ),
+                          _wrapScrollTag(index: 1, child: Education()),
+                          _wrapScrollTag(index: 2, child: Experience()),
+                          _wrapScrollTag(index: 3, child: Project()),
+                          _wrapScrollTag(index: 3, child: MiniProject()),
+                          _wrapScrollTag(index: 4, child: Contact())
                         ]))
                       ],
                     ),
