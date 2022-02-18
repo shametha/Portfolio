@@ -15,7 +15,7 @@ class About extends StatelessWidget {
             height: 630,
             width: 630,
             child: Image(
-              image: AssetImage('/images/TechStack.png'),
+              image: AssetImage('assets/images/TechStack.png'),
             ),
           ),
           Container(

@@ -79,7 +79,7 @@ class Project extends StatelessWidget {
                   youtubelink: 'https://youtu.be/a8XGQ7IJ45Y',
                 ),  
                 ProjectCardImage(
-                  imagePath: 'images/Docoline.png', 
+                  imagePath: 'assets/images/Docoline.png', 
                   projectDesc: 'Docoline is a virtual Doctor appointment booking application, that has been developed to override the problems of booking an appointment with a doctor specially during in the pandemic situation.\n\nThis software is supported to eliminate the hardships faced by this existing manual booking system.\n\nNo formal knowledge is needed for the user to use this system.\n\nAll user needs to do is sign up!', 
                   projectTitle: 'Docoline', 
                   tech: 'dart', 
@@ -88,7 +88,7 @@ class Project extends StatelessWidget {
                   ),              
                
                 ProjectCardImage(
-                  imagePath: 'images/Cookify.png', 
+                  imagePath: 'assets/images/Cookify.png', 
                   projectDesc: 'A flutter application where users worldwide can share and view recipes from other users.\n\nCookify also displays trending recipes\n\nUsers can also like and share the recipes they like', 
                   projectTitle: 'Cookify', 
                   tech: 'dart', 
@@ -96,7 +96,7 @@ class Project extends StatelessWidget {
                   
                   ),
                   ProjectCardImage(
-                  imagePath: 'images/Noted.png', 
+                  imagePath: 'assets/images/Noted.png', 
                   projectDesc: 'Noted is a flutter application to take notes and store them in an organised manner.\n\nThe notes can be shared on any other platforms too.\n\nUsers can mark a note as important and delete if unwanted.', 
                   projectTitle: 'Noted', 
                   tech: 'dart', 

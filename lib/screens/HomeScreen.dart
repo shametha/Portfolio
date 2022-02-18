@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage('/images/bg.jpg'),
+          image: AssetImage('assets/images/bg.jpg'),
           fit: BoxFit.cover,
           colorFilter: new ColorFilter.mode(
               Colors.black.withOpacity(0.5), BlendMode.dstATop),
@@ -260,7 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Container(
                                   width: size.width * 0.6,
                                   child: Image.asset(
-                                    '/images/p.jpg',
+                                    'assets/images/p.jpg',
                                   ),
                                   color: Colors.green,
                                 )
