@@ -73,7 +73,7 @@ class ProjectCardVideo extends StatelessWidget {
                   top: size.height *0.15,
                   right: 10.0,
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color:Colors.white70),
                     width: size.width * 0.32,

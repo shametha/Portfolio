@@ -43,8 +43,8 @@ class ProjectCardImage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 16.0,
-                  right: 40.0,
+                  top: 18.0,
+                  right: 60.0,
                   child: Container(
                     height: size.height * 0.10,
                     width: size.width * 0.25,
@@ -68,7 +68,7 @@ class ProjectCardImage extends StatelessWidget {
                   top: size.height * 0.15,
                   right: 10.0,
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color:Colors.white70),
                     width: size.width * 0.32,
@@ -83,7 +83,7 @@ class ProjectCardImage extends StatelessWidget {
                               fontSize: 16.0,
                               fontWeight: FontWeight.w700,
                               letterSpacing: 0.75,
-                              color: Colors.blue[900],
+                              color: Colors.black,
                             ),
                           ),
                         ),
@@ -92,7 +92,7 @@ class ProjectCardImage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: size.height * 0.07,
+                  top: 16,
                   right: 10.0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -102,8 +102,7 @@ class ProjectCardImage extends StatelessWidget {
                           color: Colors.white,
                           onPressed: () {
                             launch.launchURL(githubLink);
-                          }),
-                      
+                          }),                      
                     ],
                   ),
                 ),

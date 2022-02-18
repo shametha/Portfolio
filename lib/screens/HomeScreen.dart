@@ -301,11 +301,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Project()
                             ),
                             _wrapScrollTag(
-                            index: 5, 
+                            index: 4, 
                             child: MiniProject()
                             ),
                             _wrapScrollTag(
-                              index: 4, 
+                              index:5, 
                               child: Contact())
                         ]))
                       ],
