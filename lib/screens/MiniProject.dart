@@ -54,6 +54,7 @@ class _MiniProjectState extends State<MiniProject> {
           ),
           Row(
             children: [
+              SizedBox(width:size.width*0.05),
               MiniProjectCard(
                 imagePath: 'assets/images/NumberPicker.gif',
                 projectTitle: 'Number Picker',
@@ -68,8 +69,10 @@ class _MiniProjectState extends State<MiniProject> {
               ),
             ],
           ),
+          SizedBox(height:size.width*0.05),
           Row(
             children: [
+              SizedBox(width:size.width*0.05),
               MiniProjectCard(
                 imagePath: 'assets/images/pushNotifications.gif',
                 projectTitle: 'Push Notifications',
@@ -84,8 +87,10 @@ class _MiniProjectState extends State<MiniProject> {
               ),
             ],
           ),
+          SizedBox(height:size.width*0.05),
           Row(
             children: [
+              SizedBox(width:size.width*0.05),
               MiniProjectCard(
                 imagePath: 'assets/images/calc.png',
                 projectTitle: 'Calculator',
