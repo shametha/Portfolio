@@ -70,7 +70,7 @@ class ProjectCardImage extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color:Colors.white70),
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color:Colors.white70.withOpacity(0.5)),
                     width: size.width * 0.32,
                     child: Wrap(
                       alignment: WrapAlignment.center,

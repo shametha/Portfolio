@@ -6,7 +6,6 @@ class EducationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Column(
-      //mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         EducationData(
@@ -16,7 +15,7 @@ class EducationCard extends StatelessWidget {
           cgpa: 'Cummulative CGPA : 9.8',           
         ),
         SizedBox(
-            height: size.height * 0.05),
+            height: size.height * 0.07),
         EducationData(
           title: "Maharishi Vidya Mandir",
           subTitle:"Class 12 CBSE\nMajoring in Computer Science",
@@ -24,7 +23,7 @@ class EducationCard extends StatelessWidget {
           cgpa: 'Percentage : 89%',
         ),
         SizedBox(
-            height: size.height * 0.05),
+            height: size.height * 0.07),
         EducationData(
           title:"The Titan School",
           subTitle:"Class 10 CBSE",

@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
           image: AssetImage('/images/bg.jpg'),
           fit: BoxFit.cover,
           colorFilter: new ColorFilter.mode(
-              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+              Colors.black.withOpacity(0.5), BlendMode.dstATop),
         )),
         child: SingleChildScrollView(
           physics: ScrollPhysics(),
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Spacer(),
                     Expanded(
                       child: DefaultTabController(
-                          length: 4,
+                          length: 5,
                           child: TabBar(
                             indicatorColor: Colors.greenAccent,
                             onTap: (index) async {
@@ -143,7 +143,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: Color(0xffBAD0D0),
                                 ),
                               )),
-                              
+                              Tab(
+                                  child: Text(
+                                "Contact Me",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  letterSpacing: 3.0,
+                                  color: Color(0xffBAD0D0),
+                                ),
+                              )),                              
                             ],
                           )),
                     ),
@@ -163,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 40,
                           height: 40,
                           decoration: new BoxDecoration(
-                            color: Color(0xffC1C1C1),
+                            color: Colors.white,
                             shape: BoxShape.circle,
                           ),
                           child: IconButton(
@@ -179,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 40,
                           height: 40,
                           decoration: new BoxDecoration(
-                            color: Color(0xffC1C1C1),
+                            color: Colors.white,
                             shape: BoxShape.circle,
                           ),
                           child: IconButton(
@@ -195,7 +204,23 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: 40,
                           height: 40,
                           decoration: new BoxDecoration(
-                            color: Color(0xffC1C1C1),
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          child: IconButton(
+                              icon: FaIcon(FontAwesomeIcons.link),
+                              color: Color(0xff052EC1),
+                              iconSize: 20.0,
+                              onPressed: () {
+                                launch.launchURL("https://shamethagopinathan.wixsite.com/indegeniousindianart");
+                              }),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(5),
+                          width: 40,
+                          height: 40,
+                          decoration: new BoxDecoration(
+                            color: Colors.white,
                             shape: BoxShape.circle,
                           ),
                           child: IconButton(
@@ -211,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Container(
                             height: size.height * 0.20,
                             width: 2,
-                            color: Colors.grey.withOpacity(0.4),
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -301,11 +326,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Project()
                             ),
                             _wrapScrollTag(
-                            index: 4, 
+                            index: 3, 
                             child: MiniProject()
                             ),
                             _wrapScrollTag(
-                              index:5, 
+                              index:4, 
                               child: Contact())
                         ]))
                       ],

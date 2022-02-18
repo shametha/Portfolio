@@ -24,7 +24,7 @@ class Project extends StatelessWidget {
             width: 12.0,
           ),
           Text(
-            "Project",
+            "Projects",
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.w700,
