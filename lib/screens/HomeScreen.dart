@@ -257,17 +257,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             delegate: SliverChildListDelegate([
                           Stack(
                             children: [
-                              Row(children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [                                
                                 Container(
                                   color: Colors.black,
                                   width: size.width * 0.3,
                                 ),
                                 Container(
-                                  width: size.width * 0.6,
+                                  width: size.width * 0.4,
                                   child: Image.asset(
-                                    'assets/images/p.jpg',
+                                    'assets/images/Me.png',
                                   ),
-                                  color: Colors.green,
                                 )
                               ]),
                               Column(
