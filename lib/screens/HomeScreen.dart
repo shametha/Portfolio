@@ -268,7 +268,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Container(
                                   width: size.width * 0.4,
                                   child: Image.asset(
-                                    'assets/images/Me.png',
+                                    'assets/images/myself.png',
                                   ),
                                 )
                               ]),
